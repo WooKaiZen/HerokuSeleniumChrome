@@ -2,7 +2,9 @@ print("STARTING MAIN")
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 print("SELENIUM IMPORTED")
-import os
+import os, sys
+print(sys.path)
+exit()
 print("OS IMPORTED")
 chrome_options = webdriver.ChromeOptions()
 print("OPTIONS CREATED")
