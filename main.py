@@ -4,6 +4,10 @@ from selenium.webdriver.chrome.service import Service
 print("SELENIUM IMPORTED")
 import os, sys
 print(sys.path)
+google_chrome_bin = os.environ.get("GOOGLE_CHROME_BIN")
+chromedriver_path = os.environ.get("CHROMEDRIVER_PATH")
+print("GOOGLE_CHROME_BIN:", google_chrome_bin)
+print("CHROMEDRIVER_PATH:", chromedriver_path)
 exit()
 print("OS IMPORTED")
 chrome_options = webdriver.ChromeOptions()
