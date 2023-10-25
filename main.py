@@ -1,5 +1,6 @@
 print("STARTING MAIN")
 from selenium import webdriver
+from selenium.webdriver.firefox.service import Service
 print("SELENIUM IMPORTED")
 import os
 print("OS IMPORTED")
@@ -19,7 +20,8 @@ chrome_options.add_argument("--remote-debugging-port=9222")
 print("REMOTE DEBUGGING PORT SET")
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 print("CHROME BINARY LOCATION SET")'''
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+service = Service(executable_path="CHROMEDRIVER_PATH")
+driver = webdriver.Chrome(service=service, chrome_options=chrome_options)
 print("DRIVER CREATED")
 driver.get("https://medium.com")
 print("WEBPAGE OPEN")
