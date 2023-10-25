@@ -1,6 +1,6 @@
 print("STARTING MAIN")
 from selenium import webdriver
-from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.chrome.service import Service
 print("SELENIUM IMPORTED")
 import os
 print("OS IMPORTED")
