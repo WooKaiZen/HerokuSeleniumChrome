@@ -21,7 +21,7 @@ print("REMOTE DEBUGGING PORT SET")
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 print("CHROME BINARY LOCATION SET")'''
 service = Service(executable_path="CHROMEDRIVER_PATH")
-driver = webdriver.Chrome(service=service, chrome_options=chrome_options)
+driver = webdriver.Chrome(service=service, options=chrome_options)
 print("DRIVER CREATED")
 driver.get("https://medium.com")
 print("WEBPAGE OPEN")
