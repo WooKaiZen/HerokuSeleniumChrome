@@ -2,13 +2,7 @@ print("STARTING MAIN")
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 print("SELENIUM IMPORTED")
-import os, sys
-print(sys.path)
-google_chrome_bin = os.environ.get("GOOGLE_CHROME_BIN")
-chromedriver_path = os.environ.get("CHROMEDRIVER_PATH")
-print("GOOGLE_CHROME_BIN:", google_chrome_bin)
-print("CHROMEDRIVER_PATH:", chromedriver_path)
-exit()
+import os
 print("OS IMPORTED")
 chrome_options = webdriver.ChromeOptions()
 print("OPTIONS CREATED")
@@ -27,7 +21,7 @@ print("REMOTE DEBUGGING PORT SET")
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 print("CHROME BINARY LOCATION SET")'''
 service = Service(executable_path="CHROMEDRIVER_PATH")
-driver = webdriver.Chrome(service=service, options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options) #service=service, 
 print("DRIVER CREATED")
 driver.get("https://medium.com")
 print("WEBPAGE OPEN")
