@@ -1,3 +1,4 @@
+print("STARTING MAIN")
 from selenium import webdriver
 print("SELENIUM IMPORTED")
 import os
